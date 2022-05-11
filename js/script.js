@@ -68,7 +68,7 @@ let quotes = [
 ***/
 
 function getRandomQuote(){
-  let randomNumber = Math.floor(Math.random() * 7);
+  let randomNumber = Math.floor(Math.random() * 7)
   return quotes[randomNumber]
 }
 
@@ -79,17 +79,27 @@ function getRandomQuote(){
 
 function printQuote(){
   let randomQuote = getRandomQuote()
-  let htmlString = `<p class="quote"> ${getRandomQuote[0]} </p>
-  <p class="source"> ${getRandomQuote[1]}
-    <span class="citation"> ${getRandomQuote[2]} </span>
-    <span class="year"> ${getRandomQuote[3]} </span>
-  </p>`
+  let htmlString = `<p class="quote"> ${randomQuote.quote} </p>
+  <p class="source"> ${randomQuote.source}`
+
+  if (getRandomQuote.citation = true) {
+    htmlString = htmlString.concat(`<span class="citation"> ${randomQuote.citation} </span>`)
+  }
+
+  if (getRandomQuote.year = true) {
+    htmlString = htmlString.concat(`<span class="year"> ${randomQuote.year} </span>`)
+  }
+
+  htmlString.concat(`</p>`)
+
+  document.getElementById('quote-box').innerHTML = htmlString
 }
 
+printQuote()
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false)

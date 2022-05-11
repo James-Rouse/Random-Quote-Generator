@@ -10,6 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+
 let quotes = [  
   {
     "quote": "The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so damn beautiful.",
@@ -65,6 +66,7 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
+
 function getRandomQuote(){
   let randomNumber = Math.floor(Math.random() * 7);
   return quotes[randomNumber]
@@ -74,6 +76,7 @@ function getRandomQuote(){
 /***
  * `printQuote` function
 ***/
+
 function printQuote(){
   let randomQuote = getRandomQuote()
   let htmlString = `<p class="quote"> ${randomQuote[0]} </p>

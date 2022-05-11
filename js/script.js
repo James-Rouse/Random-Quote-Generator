@@ -8,7 +8,7 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /*** 
- * `quotes` array 
+ * Array containing anime quotes and associated metadata.
 ***/
 let quotes = [  
   {
@@ -71,7 +71,7 @@ let quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * Returns a random quote from the quotes array.
 ***/
 function getRandomQuote(){
   let randomNumber = Math.floor(Math.random() * 7)
@@ -80,7 +80,7 @@ function getRandomQuote(){
 
 
 /***
- * `printQuote` function
+ * Injects random quotes from getRandomQuote into the HTML.
 ***/
 function printQuote(){
   let randomQuote = getRandomQuote()
@@ -102,7 +102,11 @@ function printQuote(){
   document.getElementById('quote-box').innerHTML = htmlString
 }
 
-//Code for random colors gotten from Grepper after googling "How to change to random background in Javascript".
+
+/***
+ * Changes the background to a random color when refreshed or when the button is clicked.
+ * Code from Grepper via search of "How to change to random background in Javascript".
+***/
 function random(number){
   return Math.floor(Math.random()*number)
 }
@@ -118,7 +122,11 @@ function setRandomColor(){
 
 document.getElementById('load-quote').addEventListener("click",setRandomColor)
 
-//Code from Google/Grepper of "Javascript setinterval" and "Javascript refresh page".
+
+/***
+ * Auto-refreshes the page after 10 seconds.
+ * Code from Grepper via search of "Javascript setinterval" and "Javascript refresh page".
+***/
 setInterval(function(){ 
 	window.location.reload()
 }, 10000)

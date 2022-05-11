@@ -79,8 +79,11 @@ function getRandomQuote(){
 
 function printQuote(){
   let randomQuote = getRandomQuote()
-  let htmlString = `<p class="quote"> ${randomQuote[0]} </p>
-  <p class="source"> ${randomQuote[1]} </p>`
+  let htmlString = `<p class="quote"> ${getRandomQuote[0]} </p>
+  <p class="source"> ${getRandomQuote[1]}
+    <span class="citation"> ${getRandomQuote[2]} </span>
+    <span class="year"> ${getRandomQuote[3]} </span>
+  </p>`
 }
 
 

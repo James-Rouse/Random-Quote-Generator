@@ -118,6 +118,11 @@ function setRandomColor(){
 
 document.getElementById('load-quote').addEventListener("click",setRandomColor)
 
+//Code from Google/Grepper of "Javascript setinterval" and "Javascript refresh page".
+setInterval(function(){ 
+	window.location.reload()
+}, 10000)
+
 printQuote()
 setRandomColor()
 

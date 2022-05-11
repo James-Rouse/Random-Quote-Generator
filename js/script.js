@@ -16,49 +16,57 @@ let quotes = [
     "quote": "The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so damn beautiful.",
     "source": "Roy Mustang",
     "citation": "Fullmetal Alchemist: Brotherhood",
-    "year": 2009
+    "year": 2009,
+    "genre": "Anime"
   },
   {
     "quote": "I’ll leave tomorrow’s problems to tomorrow’s me.",
     "source": "Saitama",
     "citation": "One Punch Man",
-    "year": 2015
+    "year": 2015,
+    "genre": "Anime"
   },
   {
     "quote": "Being lonely is more painful then getting hurt.",
     "source": "Monkey D. Luffy",
     "citation": "One Piece",
-    "year": 1999
+    "year": 1999,
+    "genre": "Anime"
   },
   {
     "quote": "A dropout will beat a genius through hard work.",
     "source": "Rock Lee",
     "citation": "Naruto",
-    "year": 2002
+    "year": 2002,
+    "genre": "Anime"
   },
   {
     "quote": "Reject common sense to make the impossible possible.",
     "source": "Simon",
     "citation": "Gurren Lagann",
-    "year": 2007
+    "year": 2007,
+    "genre": "Anime"
   },
   {
     "quote": "A place where someone still thinks about you is a place you can call home.",
     "source": "Jiraiya",
     "citation": "Naruto",
-    "year": 2002
+    "year": 2002,
+    "genre": "Anime"
   },
   {
     "quote": "People, who can’t throw something important away, can never hope to change anything.",
     "source": "Armin Arlert",
     "citation": "Attack on Titan",
-    "year": 2013
+    "year": 2013,
+    "genre": "Anime"
   },
   {
     "quote": "Don't believe in yourself. Believe in me! Believe in the Kamina who believes in you!",
     "source": "Kamina",
     "citation": "Gurren Lagann",
-    "year": 2007
+    "year": 2007,
+    "genre": "Anime"
   },
 ]
 
@@ -89,8 +97,10 @@ function printQuote(){
   if (getRandomQuote.year = true) {
     htmlString = htmlString.concat(`<span class="year"> ${randomQuote.year} </span>`)
   }
+  
+  htmlString = htmlString.concat(`<span class="year"> ${randomQuote.genre} </span>`)
 
-  htmlString.concat(`</p>`)
+  htmlString = htmlString.concat(`</p>`)
 
   document.getElementById('quote-box').innerHTML = htmlString
 }

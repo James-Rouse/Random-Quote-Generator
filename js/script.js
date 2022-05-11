@@ -65,7 +65,10 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
+function getRandomQuote(){
+  let randomNumber = Math.floor(Math.random() * 7);
+  return quotes[randomNumber]
+}
 
 
 /***

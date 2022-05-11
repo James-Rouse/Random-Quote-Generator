@@ -10,7 +10,6 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
 let quotes = [  
   {
     "quote": "The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so damn beautiful.",
@@ -74,7 +73,6 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
 function getRandomQuote(){
   let randomNumber = Math.floor(Math.random() * 7)
   return quotes[randomNumber]
@@ -84,7 +82,6 @@ function getRandomQuote(){
 /***
  * `printQuote` function
 ***/
-
 function printQuote(){
   let randomQuote = getRandomQuote()
   let htmlString = `<p class="quote"> ${randomQuote.quote} </p>
@@ -105,11 +102,27 @@ function printQuote(){
   document.getElementById('quote-box').innerHTML = htmlString
 }
 
+//Code for random colors gotten from Grepper after googling "How to change to random background in Javascript".
+function random(number){
+  return Math.floor(Math.random()*number)
+}
+
+function randomColor(){
+return 'rgb('+random(255)+','+random(255)+','+random(255)+')'
+}
+
+function setRandomColor(){
+  let clr_val=randomColor()
+  document.body.style.backgroundColor=clr_val
+}
+
+document.getElementById('load-quote').addEventListener("click",setRandomColor)
+
 printQuote()
+setRandomColor()
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
-
 document.getElementById('load-quote').addEventListener("click", printQuote, false)
